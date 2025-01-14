@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleSentiment.css') }}">
+</head>
+<body>
+    <h1 class="heading">Sentiment Analysis</h1>
+    <div class="container">
+        <!-- Form Container (Left) -->
+        <div class="form-container">
+            <form method="POST">
+                <div class="form-group">
+                    <label for="feedback"><strong>Enter your feedback</strong></label>
+                    <input type="text" name="feedback" id="feedback" required>
+                </div>
+
+                <button type="submit">Analyze Sentiment</button>
+            </form>
+        </div>
+
+        <!-- Result Container (Right) -->
+        <div class="result-container">
+            {% if sentiment %}
+                <div class="result">
+                    <h2>Results</h2>
+                    <p><strong>Statement:</strong> {{ statement }}</p>
+                    <p><strong>Feedback Sentiment:</strong> {{ sentiment }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+/* General Reset */
+body {
+    background: linear-gradient(to right, #9B7EBD, #D4BEE4); /* Gradient with lavender shades */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #3B1E54; /* Deep Purple for all text */
+}
+
+/* Heading Styling */
+.heading {
+    color: #3B1E54; /* Deep Purple for heading text */
+    padding: 2.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Container for the content */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 95%;
+    padding: 10px;
+    color: #3B1E54; /* Deep Purple for text */
+}
+
+/* Label styling */
+label {
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    color: #3B1E54; /* Deep Purple */
+}
+
+/* Form styling */
+form {
+    padding: 20px;
+    background: rgba(246, 213, 255, 0.2); /* Glass-style lavender */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 190, 228, 0.3); /* Light lavender border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%; /* Adjusted to occupy 90% of the screen width */
+    max-width: 1200px; /* Ensures it doesn't stretch too wide on large screens */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Input fields styling */
+input[type="number"] {
+    background: rgba(219, 189, 228, 0.2); /* Glass-style input field */
+    color: #3B1E54; /* Deep Purple text */
+    padding: 10px;
+    border: 1px solid #D4BEE4; /* Light lavender border */
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px 0;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Button styling */
+button {
+    background: rgba(100, 63, 142, 0.3); /* Lavender-tinted glass */
+    color: #3B1E54; /* Deep Purple text */
+    border: 1px solid #D4BEE4; /* Light lavender border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background: rgba(155, 126, 189, 0.5); /* Stronger lavender tint */
+    color: #D4BEE4; /* Light lavender text */
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Results container styling */
+.summary {
+    padding: 20px;
+    background: rgba(246, 213, 255, 0.2); /* Glass-style lavender */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 190, 228, 0.3); /* Light lavender border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%; /* Adjusted to occupy 90% of the screen width */
+    max-width: 1200px; /* Ensures it doesn't stretch too wide on large screens */
+    color: #3B1E54; /* Deep Purple text */
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Image inside summary card */
+.summary img {
+    max-width: 100%;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #D4BEE4; /* Light lavender border */
+}
+
+/* Subtitle (Repayment schedule) styling */
+h2 {
+    color: #3B1E54; /* Lavender shade for subtitles */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}

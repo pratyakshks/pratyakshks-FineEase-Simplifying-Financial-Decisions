@@ -1,0 +1,107 @@
+/* styles.css */
+
+/* Body and heading styles */
+.heading {
+    color: #3B1E54;
+    /* padding-left: 2.5rem; */
+    font-size: 6rem;
+    font-weight: bold;
+    text-align: center;
+}
+.heading:hover{
+    -webkit-text-stroke: 1px #3B1E54;
+    color: transparent;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background: linear-gradient(to right, #C8ACD6, #7B78A4); */
+    background: linear-gradient(to right, #e2b0ff, #f7e6e1);
+
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(59, 30, 84, 0.8);
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 10px 0 0;
+}
+
+/* Card container with horizontal layout */
+.card-container {
+    display: flex;
+    justify-content: space-between; /* Ensure space between cards */
+    padding: 50px;
+    gap: 15px; /* Reduce gap to fit all cards */
+}
+
+/* Glassmorphic cards with adjusted dimensions */
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    color: #333;
+    flex: 1; /* Cards stretch to fit within container */
+    max-width: calc(18% - 10px); /* Ensure five cards fit within screen */
+    height: 220px; /* Increased card height */
+    padding: 15px;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for cards */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card text styling with reduced font sizes */
+.card h2 {
+    margin: 0 0 10px;
+    font-size: 1.5rem; /* Reduced font size */
+    color: #3B1E54;
+}
+
+.card p {
+    margin: 0;
+    font-size: 0.9rem; /* Reduced font size */
+    color: #555;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .card-container {
+        flex-wrap: wrap; /* Cards stack for smaller screens */
+        justify-content: center;
+    }
+
+    .card {
+        max-width: 90%; /* Cards take full width on mobile */
+        height: auto; /* Adjust height for content */
+    }
+
+    .card h2 {
+        font-size: 1.5rem; /* Adjusted font size */
+    }
+
+    .card p {
+        font-size: 1rem; /* Adjusted font size */
+    }
+}

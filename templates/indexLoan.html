@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleLoan.css') }}">
+</head>
+<body>
+    <h1 class="heading">Loan Recommendation System</h1>
+    <div class="container">
+
+        <form method="POST">
+            <div class="form-group">
+                <label for="loan-type">Select Loan Type:</label>
+                <select name="loan_type" id="loan-type" required>
+                    <option value="" disabled selected>-- Select Loan Type --</option>
+                    {% for loan in loan_types %}
+                        <option value="{{ loan }}">{{ loan }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="user-age">Enter Your Age:</label>
+                <input type="number" id="user-age" name="user_age" min="18" max="100" required>
+            </div>
+
+            <div class="form-group">
+                <label for="eligibility1">Select Eligibility Criteria 1:</label>
+                <select name="eligibility1" id="eligibility1" required>
+                    <option value="" disabled selected>-- Select Eligibility 1 --</option>
+                    {% for ele in eligibility_list %}
+                        <option value="{{ ele }}">{{ ele }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="eligibility2">Select Eligibility Criteria 2:</label>
+                <select name="eligibility2" id="eligibility2" required>
+                    <option value="" disabled selected>-- Select Eligibility 2 --</option>
+                    {% for ele in eligibility_list %}
+                        <option value="{{ ele }}">{{ ele }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="feature1">Select Feature 1:</label>
+                <select name="feature1" id="feature1" required>
+                    <option value="" disabled selected>-- Select Feature 1 --</option>
+                    {% for feature in features_list %}
+                        <option value="{{ feature }}">{{ feature }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="feature2">Select Feature 2:</label>
+                <select name="feature2" id="feature2" required>
+                    <option value="" disabled selected>-- Select Feature 2 --</option>
+                    {% for feature in features_list %}
+                        <option value="{{ feature }}">{{ feature }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <button type="submit">Search</button>
+        </form>
+
+        {% if recommendations is not none %}
+            <h2 class="heading">Recommended Loans</h2>
+            <div class="results">
+                {% if not recommendations.empty %}
+                    <table border="1" style="width: 100%; color: white; background-color: #1A2635;">
+
+                    <!-- <table> -->
+                        <thead>
+                            <tr>
+                                {% for col in recommendations.columns %}
+                                    <th>{{ col }}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for _, row in recommendations.iterrows() %}
+                                <tr>
+                                    {% for col in row %}
+                                        <td>{{ col }}</td>
+                                    {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p>No loans match your criteria. Try again!</p>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

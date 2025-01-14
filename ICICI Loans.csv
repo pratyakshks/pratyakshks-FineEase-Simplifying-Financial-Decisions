@@ -1,0 +1,10 @@
+Loan Type,Purpose,Eligibility,Age Criteria,Income Criteria,Loan Amount,Features
+Home Loan,Purchase or construction of a home,"Salaried,Self-employed, stable income",21-65 years,Minimum 20000 per month (salaried),Based on income and property value,"Tenure up to 30 years, flexible repayment, competitive interest rates"
+Personal Loan,"Personal expenses (travel, wedding, etc.)","Salaried,Self-employed, good credit score",23-58 years,Minimum 25000 per month,Up to 50 lakh,"Unsecured, quick approval, minimal documentation"
+Education Loan,Financing higher education in India or abroad,Students with a co-applicant,18-35 years,Co-applicant with stable income,Up to 50 lakh,"Covers tuition, travel, and living expenses, tenure up to 10 years"
+Vehicle Loan,Purchase of new or used vehicles,"Salaried,Self-employed, stable income",21-65 years,Minimum 20000 per month,Up to 100% of vehicle's on-road price,"Competitive interest rates, quick processing, flexible repayment options"
+Loan Against Property,Funds against mortgaging residential/commercial property,"Salaried,Self-employed",21-65 years,Based on property valuation,Up to 10 crore,"Tenure up to 15 years, lower interest rates, flexible usage"
+Gold Loan,Quick funds against gold ornaments and coins,Owners of gold ornaments,18+ years,Not applicable,Up to 1 crore,"Fast disbursal, competitive rates, flexible tenure"
+Business Loan,"Working capital, business expansion","Business entities, firms, professionals",21-65 years,Minimum annual income of 2.5 lakh,Varies based on business needs,"Customized solutions, competitive rates, minimal documentation"
+Top-Up Loan,Additional loan amount on existing home/LAP loans,Existing home/LAP loan customers,21-65 years,Good repayment history,Based on existing loan and property value,"Lower interest rates, flexible tenure, easy processing"
+Consumer Durable Loan,"Financing purchase of electronics, furniture, appliances","Salaried,Self-employed, good credit score",21-60 years,Varies based on product price,Varies based on product price,"No-cost EMI options, quick approval, minimal documentation"

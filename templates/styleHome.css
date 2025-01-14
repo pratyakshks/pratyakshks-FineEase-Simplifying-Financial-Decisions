@@ -1,0 +1,53 @@
+/* Glassmorphism effect for the button only */
+.content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Heading styling without glassmorphism */
+.content h1 {
+    font-size: 120px;
+    color: #3B1E54;
+    font-weight: 600;
+    margin-top: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.25s;
+}
+
+.content h1:hover {
+    -webkit-text-stroke: 1px #3B1E54;
+    color: transparent;
+}
+
+/* Glassmorphism effect for the button only */
+.content a {
+    text-decoration: none;
+    display: inline-block;
+    color: #3B1E54;
+    font-size: 25px;
+    border: 3px solid #3B1E54;
+    padding: 14px 70px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px); /* Apply blur effect for the glassmorphism effect */
+    -webkit-backdrop-filter: blur(10px); /* Webkit support for blur effect */
+    background: rgba(255, 255, 255, 0.2); /* Transparent background for the card */
+    transition: 0.3s ease;
+}
+
+.content a:hover {
+    background: rgba(59, 30, 84, 0.3); /* Slight background change on hover */
+    border-color: #fff;
+    color: #fff;
+}
+
+/* Video background */
+.back {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

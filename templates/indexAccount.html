@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleAccount.css') }}">
+</head>
+<body>
+    <h1 class="heading">Bank Account Recommendation System</h1>
+    <div class="container">
+
+        <!-- Form Section -->
+        <form method="POST" action="/">
+            <div class="form-group">
+                <label for="account-type">Select the Type of Account:</label>
+                <select name="account_type" id="account-type" required>
+                    <option value="" disabled selected>-- Select Account Type --</option>
+                    <option value="Saving">Saving</option>
+                    <option value="Current">Current</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="account-type-specific">Select Specific Account Type:</label>
+                <select name="specific_type" id="account-type-specific" required>
+                    <option value="" disabled selected>-- Select Specific Type --</option>
+                    {% for key, value in type.items() %}
+                        <option value="{{ value }}">{{ value }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="age-criteria">Select Age Criteria:</label>
+                <select name="age_criteria" id="age-criteria" required>
+                    <option value="" disabled selected>-- Select Age Criteria --</option>
+                    {% for key, value in age_cr.items() %}
+                        <option value="{{ value }}">{{ value }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="eligibility">Select Eligibility Criteria (Pick 2):</label>
+                <select name="eligibility1" id="eligibility" required>
+                    <option value="" disabled selected>-- Select First Eligibility --</option>
+                    {% for key, value in Accele.items() %}
+                        <option value="{{ value }}">{{ value }}</option>
+                    {% endfor %}
+                    
+                </select>
+                <br>
+                <br>
+                <select name="eligibility2" required>
+                    <option value="" disabled selected>-- Select Second Eligibility --</option>
+                    {% for key, value in Accele.items() %}
+                        <option value="{{ value }}">{{ value }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="features">Select Key Features (Pick 2):</label>
+                <select name="feature1" id="features" required>
+                    <option value="" disabled selected>-- Select First Feature --</option>
+                    {% for key, value in AccFeatures.items() %}
+                        <option value="{{ value }}">{{ value }}</option>
+                    {% endfor %}
+                </select>
+                <br>
+                <br>
+                <select name="feature2" required>
+                    <option value="" disabled selected>-- Select Second Feature --</option>
+                    {% for key, value in AccFeatures.items() %}
+                        <option value="{{ value }}">{{ value }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Results Section -->
+        {% if accounts is not none %}
+            <h2 class="heading">Recommended Accounts</h2>
+            <div class="result-container">
+                {% if not accounts.empty %}
+                    <table border="1" style="width: 100%; color: white; background-color: #1A2635;">
+                        <thead>
+                            <tr>
+                                {% for col in accounts.columns %}
+                                    <th>{{ col }}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in accounts.iterrows() %}
+                                <tr>
+                                    {% for item in row[1] %}
+                                        <td>{{ item }}</td>
+                                    {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p>No accounts match your criteria. Try again!</p>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+</html>

@@ -1,0 +1,54 @@
+/* General Reset */
+body {
+    background: linear-gradient(to right, #9B7EBD, #D4BEE4); /* Lavender gradient */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #3B1E54; /* Deep Purple text */
+}
+
+/* Heading Styling */
+.heading {
+    color: #3B1E54; /* Deep Purple for heading text */
+    padding: 2.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.3s ease, -webkit-text-stroke 0.3s ease;
+}
+
+/* TradingView Widget Container */
+.tradingview-widget-container {
+    align-content: center;
+    display: inline-block;
+    width: 48%;
+    justify-content: space-between;
+    border: 1px solid rgba(212, 190, 228, 0.3); /* Light lavender border for glassmorphism */
+    border-radius: 15px;
+    padding: 20px 95px 110px 95px;
+    margin: 10px 50px;
+    background: rgba(246, 213, 255, 0.2); /* Glass-style lavender background */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Subheadings Styling */
+h3 {
+    color: #3B1E54; /* Light Blue */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tradingview-widget-container {
+        width: 90%;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+}

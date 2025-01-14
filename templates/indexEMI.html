@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleEMI.css') }}">
+</head>
+<body>
+    <h1 class="heading">Loan EMI Calculator</h1>
+    <div class="container">
+        <form method="POST">
+            <div class="form-group">
+                <label for="principal">Loan Amount (₹):</label>
+                <input type="number" id="principal" name="principal" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="rate">Annual Interest Rate (%):</label>
+                <input type="number" id="rate" name="rate" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="tenure">Loan Tenure (Years):</label>
+                <input type="number" id="tenure" name="tenure" required>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+
+        {% if summary %}
+        <div class="summary">
+            <h3>Summary</h3>
+            <p><strong>Loan Amount:</strong> ₹{{ summary.principal }}</p>
+            <p><strong>Rate of Interest:</strong> {{ summary.rate }}%</p>
+            <p><strong>Loan Tenure:</strong> {{ summary.tenure }} years</p>
+            <p><strong>EMI:</strong> ₹{{ summary.emi }}</p>
+            <p><strong>Total Payment:</strong> ₹{{ summary.total_payment }}</p>
+            <p><strong>Interest Paid:</strong> ₹{{ summary.interest_paid }}</p>
+            <br>
+            <br>
+            <h3>Repayment Schedule</h3>
+            <img src="data:image/png;base64,{{ plot_url }}" alt="Repayment Schedule">
+        </div>
+       
+        {% endif %}
+    </div>
+
+
+</body>
+</html>

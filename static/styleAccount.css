@@ -1,0 +1,139 @@
+/* General Reset */
+body {
+    background: linear-gradient(to right, #9B7EBD, #D4BEE4); /* Gradient with lavender shades */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #3B1E54; /* Deep Purple for all text */
+}
+
+/* Heading Styling */
+.heading {
+    color: #3B1E54; /* Deep Purple for heading text */
+    padding: 2.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.3s ease, -webkit-text-stroke 0.3s ease;
+}
+
+
+
+/* Main Container Styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Form Styling with Glassmorphism */
+form {
+    background: rgba(246, 213, 255, 0.2); /* Glass-style lavender form */
+    /* background: rgba(255, 255, 255, 0.2); */
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 190, 228, 0.3); /* Light lavender border */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 15px;
+    
+}
+
+label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    display: block;
+    color: #3B1E54; /* Deep Purple for labels */
+}
+
+select {
+    background-color: rgba(219, 189, 228, 0.2); /* Glass-style dropdown */
+    color: #3B1E54; /* Deep Purple for dropdown text */
+    border: 1px solid #D4BEE4; /* Light lavender border */
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* Button Styling */
+button {
+    background: rgba(100, 63, 142, 0.3); /* Lavender-tinted glass */
+    color: #3B1E54; /* Deep Purple text */
+    border: 1px solid #D4BEE4; /* Light lavender border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background: rgba(155, 126, 189, 0.5); /* Stronger lavender tint */
+    color: #D4BEE4; /* Light lavender text on hover */
+}
+
+/* Result Container */
+.result-container {
+    background: rgba(219, 189, 228, 0.2); /* Glass-style lavender container */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 190, 228, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    width: 85%;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #3B1E54; /* Deep Purple text */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #D4BEE4; /* Light lavender for table rows */
+}
+
+th {
+    background: #9B7EBD; /* Lavender for headers */
+    color: #3B1E54; /* Deep Purple text */
+}
+
+td {
+    background: #D4BEE4; /* Light lavender for body cells */
+    color: #3B1E54; /* Deep Purple text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form, .result-container {
+        width: 90%;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    .heading {
+        font-size: 2.5rem;
+    }
+}
